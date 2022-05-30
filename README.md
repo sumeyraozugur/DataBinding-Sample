@@ -113,7 +113,7 @@ In Google I/O'19, Google said us you should [viewBinding](https://developer.andr
  <img src="https://user-images.githubusercontent.com/41166029/171000852-18e981da-edd1-4207-9ee0-1043d1be2115.png" width="450"/>
  
  
-
+In below, you will see my screenshots. If you examine this codes. You will get it better. 
 
 
 <div>
