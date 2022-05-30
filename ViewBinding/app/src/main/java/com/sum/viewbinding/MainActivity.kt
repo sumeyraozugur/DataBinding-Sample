@@ -16,15 +16,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val izmir = City("İzmir",3000,"Boyoz")
 
-        binding.textView.text = izmir.name
-        binding.textView2.text =izmir.population.toString()
-        binding.textView3.text = izmir.famousWith
-
-        binding.btnClick.setOnClickListener {
-            Toast.makeText(applicationContext, "Button Clicked", Toast.LENGTH_SHORT).show()
-        }
 
 
 
