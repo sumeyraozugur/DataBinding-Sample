@@ -151,6 +151,7 @@ You should initialize it first ```private lateinit var binding: ActivityMainBind
 
 ## ViewBinding
 
+### In Activity
 ````
 buildFeatures {
         viewBinding true
@@ -171,8 +172,48 @@ You should this part in build.gradle and then you can use it everywhere. Of Cour
         binding.textView3.text = izmir.famousWith
 
 ```
+
+ ### In Fragment
+ 
+ ```Kotlin
+    private var _binding: FragmentBlankBinding? = null
+    private val binding get() = _binding!!
+
+ 
+ ```
+ 
+ 
+ ```Kotlin
+ override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View? {
+        _binding = FragmentBlankBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+        
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val city =City("İzmir",3000,"Boyoz")
+        binding.textView.text = city.name
+        binding.textView2.text = city.population.toString()
+        binding.textView3.text = city.famousWith
+
+        binding.btnClick.setOnClickListener {
+            Toast.makeText(activity, "Button cliked", Toast.LENGTH_SHORT).show()
+        }
+
+
+ 
+ ```
+ 
+ 
 In Google I/O'19, Google said us you should [viewBinding](https://developer.android.com/topic/libraries/view-binding). If you want to watch it. Please [click](https://www.youtube.com/watch?v=Qxj2eBmXLHg&t=446s)
  <img src="https://user-images.githubusercontent.com/41166029/171000852-18e981da-edd1-4207-9ee0-1043d1be2115.png" width="450"/>
+ 
+ 
  
  
 In below, you will see my screenshots. If you examine this codes. You will get it better. 
