@@ -1,4 +1,4 @@
-package com.sum.databinding
+package com.sum.viewbinding
 
 data class City(
     val name: String,
