@@ -1,5 +1,30 @@
 # DataBinding-Sample
 
+## Kotlin Synthetics
+
+```
+plugins{
+
+id 'kotlin-android-extensions'
+
+}
+
+```
+
+You should add this in build.gradle and then you can use kotlin-synthetic
+````
+textView.text = "Sumeyra"
+````
+**Dipnot:** kotlin synthetic will be removed in Kotlin 1.8, which is expected to be released by the end of 2022.  
+
+
+
+## FindViewByID
+
+## DataBinding
+
+## ViewBinding
+
 
 <div>
 <table>
