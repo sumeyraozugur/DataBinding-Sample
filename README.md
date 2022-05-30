@@ -1,6 +1,6 @@
 # DataBinding-Sample
 
-## Kotlin Synthetics
+## :loudspeaker: Kotlin Synthetics
 
 ```
 plugins{
@@ -19,10 +19,10 @@ textView.text = "Sumeyra"
 
 
 
-## FindViewByID
+## :loudspeaker:FindViewByID
 For using FindViewById you don't need to add anything in gradle file.  You can also use it in Java.
 
-### In Activity
+### :round_pushpin:In Activity
 
 ````Kotlin
         val textName:TextView = findViewById(R.id.textView)
@@ -42,7 +42,7 @@ For using FindViewById you don't need to add anything in gradle file.  You can a
 
 ````
 
-### In Fragment
+### :round_pushpin: In Fragment
 
 ```Kotlin
     private lateinit var  buton: Button
@@ -73,7 +73,7 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 ```
 
-## DataBinding
+## :loudspeaker: DataBinding
 
 For [dataBinding](https://developer.android.com/jetpack/androidx/releases/databinding), you should add this and ``kotlin-kapt`` plugin in build.gradle 
 ````
@@ -107,7 +107,7 @@ if you want to use data directly in xml, databinding make you use that like this
 
 In TextView  you should do like this  ``` android:text="@{city.name}" ``` 
 
-### In Activity 
+### :round_pushpin:In Activity 
 You should initialize it first ```private lateinit var binding: ActivityMainBinding ```
 
 ```Kotlin
@@ -119,7 +119,7 @@ You should initialize it first ```private lateinit var binding: ActivityMainBind
 
 ```
 
-### In Fragment
+###  :round_pushpin:In Fragment
 
 ```Kotlin
     private var _binding: FragmentBlankBinding? = null
@@ -149,9 +149,9 @@ You should initialize it first ```private lateinit var binding: ActivityMainBind
 ```
 
 
-## ViewBinding
+## :loudspeaker:ViewBinding
 
-### In Activity
+### :round_pushpin: In Activity
 ````
 buildFeatures {
         viewBinding true
@@ -173,7 +173,7 @@ You should this part in build.gradle and then you can use it everywhere. Of Cour
 
 ```
 
- ### In Fragment
+ ### :round_pushpin: In Fragment
  
  ```Kotlin
     private var _binding: FragmentBlankBinding? = null
