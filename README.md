@@ -107,7 +107,7 @@ if you want to use data directly in xml, databinding make you use that like this
 
 In TextView  you should do like this  ``` android:text="@{city.name}" ``` 
 
-In MainActiviy 
+### In Activity 
 You should initialize it first ```private lateinit var binding: ActivityMainBinding ```
 
 ```Kotlin
@@ -116,6 +116,35 @@ You should initialize it first ```private lateinit var binding: ActivityMainBind
 
         binding.city =City("İzmir",300,"Boyoz")
 
+
+```
+
+### In Fragment
+
+```Kotlin
+    private var _binding: FragmentBlankBinding? = null
+    private val binding get() = _binding!!
+
+```
+
+```Kotlin
+
+ override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View? {
+        // Inflate the layout for this fragment
+        _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_blank, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.city =City("İzmir",300,"Boyoz")
+        binding.btnClick.setOnClickListener {
+            Toast.makeText(activity, "Button cliked",Toast.LENGTH_SHORT).show()
+        }
+    }
 
 ```
 
