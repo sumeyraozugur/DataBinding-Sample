@@ -22,6 +22,8 @@ textView.text = "Sumeyra"
 ## FindViewByID
 For using FindViewById you don't need to add anything in gradle file.  You can also use it in Java.
 
+### In Activity
+
 ````Kotlin
         val textName:TextView = findViewById(R.id.textView)
         val textPopulation:TextView = findViewById(R.id.textView2)
@@ -39,6 +41,37 @@ For using FindViewById you don't need to add anything in gradle file.  You can a
         }
 
 ````
+
+### In Fragment
+
+```Kotlin
+    private lateinit var  buton: Button
+    private lateinit var  textName: TextView
+    private lateinit var  textPopulation: TextView
+    private lateinit var  textFamous: TextView
+
+```
+
+```Kotlin
+override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val city = City("İzmir",3000,"Boyoz")
+        buton = view.findViewById(R.id.btnClick)
+        textName = view.findViewById(R.id.textView)
+        textPopulation = view.findViewById(R.id.textView3)
+        textFamous = view.findViewById(R.id.textView2)
+
+
+        textName.text = city.name
+        textPopulation.text=city.population.toString()
+        textFamous.text= city.famousWith
+
+        buton.setOnClickListener {
+            Toast.makeText(activity,"Button Cliked",Toast.LENGTH_SHORT).show()
+
+        }
+
+```
 
 ## DataBinding
 
