@@ -11,11 +11,11 @@ id 'kotlin-android-extensions'
 
 ```
 
-You should add this in build.gradle and then you can use kotlin-synthetic
+You should add this in build.gradle and then you can use [kotlin-synthetic](https://android-developers.googleblog.com/2022/02/discontinuing-kotlin-synthetics-for-views.html)
 ````
 textView.text = "Sumeyra"
 ````
-**Dipnot:** kotlin synthetic will be removed in Kotlin 1.8, which is expected to be released by the end of 2022.  
+**Dipnot:** [kotlin synthetic](https://android-developers.googleblog.com/2020/11/the-future-of-kotlin-android-extensions.html) will be removed in Kotlin 1.8, which is expected to be released by the end of 2022.  
 
 
 
@@ -42,7 +42,7 @@ For using FindViewById you don't need to add anything in gradle file.  You can a
 
 ## DataBinding
 
-For dataBinding, you should add this and ``kotlin-kapt`` plugin in build.gradle 
+For [dataBinding](https://developer.android.com/jetpack/androidx/releases/databinding), you should add this and ``kotlin-kapt`` plugin in build.gradle 
 ````
 buildFeatures {
         dataBinding true
@@ -94,7 +94,7 @@ buildFeatures {
         viewBinding true
     }
 ````
-You should this part in build.gradle and then you can use it everywhere. Of Course you should initialize it first 
+You should this part in build.gradle and then you can use it everywhere. Of Course you should initialize it first. 
 ```private lateinit var binding: ActivityMainBinding ```
 
 ```Kotlin
@@ -109,9 +109,8 @@ You should this part in build.gradle and then you can use it everywhere. Of Cour
         binding.textView3.text = izmir.famousWith
 
 ```
-
-
- <img src="https://user-images.githubusercontent.com/41166029/171000852-18e981da-edd1-4207-9ee0-1043d1be2115.png"/>
+In Google I/O'19, Google said us you should [viewBinding](https://developer.android.com/topic/libraries/view-binding). If you want to watch it. Please [click](https://www.youtube.com/watch?v=Qxj2eBmXLHg&t=446s)
+ <img src="https://user-images.githubusercontent.com/41166029/171000852-18e981da-edd1-4207-9ee0-1043d1be2115.png" width="450"/>
  
  
 
@@ -144,7 +143,6 @@ You should this part in build.gradle and then you can use it everywhere. Of Cour
   </div> 
   
   
-  
-  
+
   
   
