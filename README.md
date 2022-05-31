@@ -111,10 +111,8 @@ In TextView  you should do like this  ``` android:text="@{city.name}" ```
 You should initialize it first ```private lateinit var binding: ActivityMainBinding ```
 
 ```Kotlin
-
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
-        binding.city =City("İzmir",300,"Boyoz")
+    binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+    binding.city =City("İzmir",300,"Boyoz")
 
 
 ```
@@ -161,7 +159,7 @@ You should this part in build.gradle and then you can use it everywhere. Of Cour
 ```private lateinit var binding: ActivityMainBinding ```
 
 ```Kotlin
-  binding = ActivityMainBinding.inflate(layoutInflater)
+    binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
@@ -184,10 +182,10 @@ You should this part in build.gradle and then you can use it everywhere. Of Cour
  
  
  ```Kotlin
- override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View? {
+     override fun onCreateView(
+         inflater: LayoutInflater, container: ViewGroup?,
+         savedInstanceState: Bundle?,
+     ): View? {
         _binding = FragmentBlankBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
@@ -216,34 +214,12 @@ In Google I/O'19, Google said us you should [viewBinding](https://developer.andr
  
  
  
-In below, you will see my screenshots. If you examine this codes. You will get it better. 
+In below, you will see my viewBinding screenshot. I did it every part(findViewById, viewBinding, dataBinding). If you examine this codes. You will get it better. 
+
+ <img src="https://user-images.githubusercontent.com/41166029/170981243-4a0a0288-7ac0-4f5d-ad98-0d35245a7014.png" width="200" hspace="5"/>
 
 
-<div>
-<table>
-  <tr>
-    <td >FindViewById </td>
-     <td >DataBinding</td>
-    <td >ViewBinding</td>
-  
- 
-  </tr>
-  
-  <tr>
-    <td >
-      <img src="https://user-images.githubusercontent.com/41166029/170981265-8dc1a849-62d1-479a-8387-a0a3ab60101c.png" width="200" hspace="5"/>
-    </td>
-   <td>
-     <img src="https://user-images.githubusercontent.com/41166029/170981849-3fe5d38c-c13d-47f6-8c1c-5b6559df78d0.png" width="200" hspace="5"/>
-    </td>
-       <td>
-     <img src="https://user-images.githubusercontent.com/41166029/170981243-4a0a0288-7ac0-4f5d-ad98-0d35245a7014.png" width="200" hspace="5"/>
-    </td>
 
-        
-  </tr>
- </table>
-  </div> 
   
   
 
