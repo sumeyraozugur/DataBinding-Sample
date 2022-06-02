@@ -25,20 +25,20 @@ For using FindViewById you don't need to add anything in gradle file.  You can a
 ### :round_pushpin:In Activity
 
 ````Kotlin
-        val textName:TextView = findViewById(R.id.textView)
-        val textPopulation:TextView = findViewById(R.id.textView2)
-        val textFamous:TextView = findViewById(R.id.textView3)
-        val buttonClick: Button = findViewById(R.id.btnClick )
+    val textName:TextView = findViewById(R.id.textView)
+    val textPopulation:TextView = findViewById(R.id.textView2)
+    val textFamous:TextView = findViewById(R.id.textView3)
+    val buttonClick: Button = findViewById(R.id.btnClick )
 
-        val izmir = City("İzmir",3000,"Boyoz")
+    val izmir = City("İzmir",3000,"Boyoz")
 
-        textName.text = izmir.name
-        textPopulation.text = "Nüfusu: ${izmir.population}"
-        textFamous.text =izmir.famousWith
+    textName.text = izmir.name
+    textPopulation.text = "Nüfusu: ${izmir.population}"
+    textFamous.text =izmir.famousWith
 
-        buttonClick.setOnClickListener {
-            Toast.makeText(applicationContext,"Button Cliked",Toast.LENGTH_SHORT).show()
-        }
+    buttonClick.setOnClickListener {
+        Toast.makeText(applicationContext,"Button Cliked",Toast.LENGTH_SHORT).show()
+     }
 
 ````
 
@@ -160,14 +160,14 @@ You should this part in build.gradle and then you can use it everywhere. Of Cour
 
 ```Kotlin
     binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+    val view = binding.root
+    setContentView(view)
 
-        val izmir = City("İzmir",3000,"Boyoz")
+    val izmir = City("İzmir",3000,"Boyoz")
 
-        binding.textView.text = izmir.name
-        binding.textView2.text =izmir.population.toString()
-        binding.textView3.text = izmir.famousWith
+    binding.textView.text = izmir.name
+    binding.textView2.text =izmir.population.toString()
+    binding.textView3.text = izmir.famousWith
 
 ```
 
